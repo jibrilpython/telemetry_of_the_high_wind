@@ -1,0 +1,42 @@
+1. DESIGN PHILOSOPHY
+Visual: "Stratospheric Transmission" — the UI goes dark, and reaches upward. These instruments were released into the atmosphere and never expected to return — they were the first objects humans sent into the stratosphere with the intention of receiving data back. The design language draws from the aesthetic of a mid-century meteorological station's night operations room: dark surfaces, the specific green of a radar scope, oscilloscope traces, and the cold blue-white of high-altitude sky just before the balloon bursts at 30,000 metres. Think the design sensibility of a NOAA upper-air station's instrument archive, rebuilt as a collector's catalog for the age of radio silence and paper-tape readouts.
+Mood: high-altitude precise, transmission-serious, stratospheric-cold, night-operations quiet, upper-air obsessive.
+Important: No cloud illustrations, no balloon silhouettes used decoratively, no weather app aesthetics borrowed from consumer meteorology. A barosonde payload and a radiosonde transmitter were precision scientific instruments launched into an environment that would kill their designers — the app documents them with the rigour of a meteorological service's equipment register, not a weather hobbyist's notebook.
+
+2. COLORS
+#060A08 — Main background (night operations black — a deep near-black with the faintest green undertone, like the interior of a meteorological tracking station at 2AM. Cooler than the shed dark of Shuttles of the Mill Row, darker than the powerhouse dark of Currents of the Turbine, with a specific green-black quality that references radar screen phosphor.)
+#E0EDE4 — Primary text & high-contrast elements (radiosonde white — cool, slightly green-tinted, like the color of a transmission signal on an oscilloscope screen. The coolest primary text in the dark-background group.)
+#0C100E — Secondary panels / card surfaces
+#566860 — Secondary text / muted labels (stratosphere grey — cool, muted green-grey, like the color of high-altitude cirrus cloud from below)
+#2A8A4A — Primary accent (radar green — the specific phosphor green of a 1950s weather radar scope, the green of an oscilloscope trace recording a pressure signal, the green of a teletype machine's indicator light in a met office. The most transmission-specific accent in the series — this is the color of received data made visible.)
+#121814 — Outline / stroke / dividers (night ops rule lines, deep green-black)
+#5A8AAA — Secondary accent (stratosphere blue — the specific cold blue of the sky at 25,000 metres altitude, the blue of a radiosonde's transmitter crystal housing, the blue-grey of high-altitude frost on a recovered payload. For era tags, altitude class indicators, and launch station provenance badges. The coldest secondary accent in the series.)
+#C0392B — Critical errors only
+Important: Radar green and stratosphere blue are altitude opposites — green is the ground station receiving the signal, blue is the sky the instrument was launched into. Together they encode the complete telemetry circuit: transmission and reception, atmosphere and observer. The green-black background is unique in the series — no other dark-background app has this specific phosphor-green undertone. It must be preserved or the entire night-operations reference collapses.
+
+3. TYPOGRAPHY
+Display / Headings: Space Grotesk (weight 600–700) — returns from the Anemometer Attic, where its geometric mechanical quality suited ventilation instrumentation. Here it suits upper-atmosphere instrumentation even more precisely — its slightly technical geometry references the instrument panel lettering of a meteorological tracking station, the stencilled designations on radiosonde payload housings, and the printed circuit labels of early telemetry electronics. Used for payload names, instrument designations on detail views, and the app title.
+Body / Descriptions: IBM Plex Sans (weight 300–400, in radiosonde white) — engineered and readable on dark green-black. For condition notes, launch station history, frequency specifications, and all prose fields.
+Monospace / Identifiers: IBM Plex Mono — for archive codes like THW-VAISALA-RS11-1957-FIN-HELSINKI-MET-009, transmission frequency (403.0 MHz), burst altitude (32,400 m), and all structured technical fields.
+Important: Space Grotesk at display sizes should feel like instrument panel labelling from a government meteorological facility — precise, slightly cold, and completely functional. IBM Plex Mono for every frequency, altitude, and archive code — radiosonde specifications were published in meteorological service bulletins to four significant figures, and the typography must carry that precision.
+
+4. SURFACE & TEXTURE LANGUAGE
+
+Backgrounds: flat night operations black — no noise, no static effect, no radar sweep animation
+Cards: #0C100E surface with a 1px border at #121814 and 10px corner radius — dark payload record cards in a dark met station archive
+Payload silhouette motif: each list card features a small SVG — a minimal side-elevation silhouette of the instrument type: a barosonde as a small rectangular cardboard box with a clockwork drum visible on one face, a radiosonde as a rectangular payload with a whip antenna extending from the top, a temperature sensor as a thin rod with a sensing element at the tip, a radar reflector as a diamond-wire tetrahedron, a transmitter package as a box with a coil antenna. The antenna or sensing element is rendered in radar green for operational instruments, stratosphere blue for high-altitude recovered or display specimens. This is the most transmission-oriented motif in the series — every silhouette has an antenna or sensing element reaching upward, encoding the instrument's fundamental purpose in its geometry.
+Frequency and altitude badge: each card shows the transmission frequency and design altitude in IBM Plex Mono — 403 MHz / 35km, 1680 MHz / 28km — in a small dark green-bordered pill in radar green text. The two defining specifications of any radiosonde payload — frequency determines which ground station could receive it, altitude determines the atmospheric layer it was designed to sample.
+Photography: payload photography on near-black — the antenna assembly, sensing element, or clockwork drum face forward. For barosondes, show the scratching stylus against the silver cylinder. For radiosonde packages, show the transmitter circuit and antenna together. Recovered payloads with weather damage and frost markings are acceptable in frame — field condition is part of the provenance.
+Launch station provenance tag: small pill showing the originating met service and station — NOAA Sable Island, UK Met Office Camborne, Vaisala Helsinki, WMO Nairobi — in radar green at 15% opacity fill with full green text
+
+
+5. INTERACTION PRINCIPLES
+
+Transitions: 180–220ms ease-out — clean and transmission-precise, like a signal lock acquired at altitude
+Selected state: radar green left-border (3px) + very faint #0A1008 background tint on active cards
+Empty states: NO PAYLOADS IN THIS ARCHIVE. in IBM Plex Mono, centered, stratosphere grey — one line
+Loading: a thin radar green progress bar at screen top — immediate onset, like a carrier signal establishing
+Navigation: bottom tab bar on night ops surface — four tabs: Archive, Launch Map, Logbook, Settings. Active tab in radar green. Tab bar background #0C100E, border top #121814.
+Atmospheric layer filter: a first-class filter chip row — Troposphere (0–12km), Tropopause, Stratosphere (12–50km), Upper Stratosphere, Near Space (50km+) — because the atmospheric layer a payload was designed to sample determines its pressure casing, its transmitter power, its sensor calibration, and its balloon specification, and it is the primary scientific classification axis for any upper-atmosphere instrument collector
+
+Important: The payload silhouette SVG on each card is the most upward-directed motif in the series — every antenna reaches toward the top of the card, encoding the instrument's launch trajectory in its geometry. No other motif in the series has this consistent vertical directionality. Radar green antenna means the payload is complete, transmitter-intact, and archive-documented. Stratosphere blue means it was recovered from altitude and shows field condition. That distinction should feel like the difference between a payload on the launch bench and a payload found in a field three counties away — both equally valuable to a collector, for entirely different reasons.
